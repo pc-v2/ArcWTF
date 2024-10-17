@@ -22,7 +22,7 @@
   box-shadow: 0px 2px 1px #00000000;
   background: #f2f2f220;
   color: #ffffff60;
-	margin: 5px 0 0 0;
+  margin: 5px 0 0 0;
 }
 
 .Tab[data-pin="true"][data-active="true"] {
@@ -48,10 +48,10 @@
 /* GENERAL */
 
 .AnimatedTabList .Tab {
-	display: flex;
+  display: flex;
   width: 100%;
-	flex-wrap: wrap;
-	margin: 5px 10px;
+  flex-wrap: wrap;
+  margin: 5px 10px;
 }
 
 .AnimatedTabList .Tab .title,
@@ -101,11 +101,11 @@ body {
 }
 
 .TabsPanel {
-	display: flex;
-	margin: 5px 0 0 0;
+  display: flex;
+  margin: 5px 0 0 0;
 }
 .TabsPanel .Tab {
-	width: auto;
+  width: auto;
 }
 
 /* Uncomment this to apply Segoe UI Variable font - Make sure to install the font first */
@@ -115,7 +115,7 @@ root.root {
 
 /* NEW TAB BUTTON*/
 .TabsPanel .new-tab-btns {
-	padding: 0 10px;
+  padding: 0 10px;
   --tabs-height
 }
 
@@ -128,19 +128,19 @@ root.root {
 .TabsPanel .new-tab-btn:first-of-type > img{
   background-color: var(--nav-btn-fg);
   mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiB3aWR0aD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwIDIuNUMxMCAyLjIyMzg2IDkuNzc2MTQgMiA5LjUgMkM5LjIyMzg2IDIgOSAyLjIyMzg2IDkgMi41VjlIMi41QzIuMjIzODYgOSAyIDkuMjIzODYgMiA5LjVDMiA5Ljc3NjE0IDIuMjIzODYgMTAgMi41IDEwSDlWMTYuNUM5IDE2Ljc3NjEgOS4yMjM4NiAxNyA5LjUgMTdDOS43NzYxNCAxNyAxMCAxNi43NzYxIDEwIDE2LjVWMTBIMTYuNUMxNi43NzYxIDEwIDE3IDkuNzc2MTQgMTcgOS41QzE3IDkuMjIzODYgMTYuNzc2MSA5IDE2LjUgOUgxMFYyLjVaIiBmaWxsPSIjMjEyMTIxIi8+PC9zdmc+");
- 	opacity: 40%;
+  opacity: 40%;
   width: 17px;
   height: 17px;
   scale: 0.9;
-	fill: transparent;
-	position: reelative;
-	top: 6px;
+  fill: transparent;
+  position: reelative;
+  top: 6px;
 }
 
 .TabsPanel .new-tab-btn:first-of-type > svg.-badge,
 .TabsPanel .new-tab-btn:first-of-type > img.-badge {
-	width: 0;
-	height: 0;
+  width: 0;
+  height: 0;
 }
 
 .TabsPanel .new-tab-btn:first-of-type:after {
