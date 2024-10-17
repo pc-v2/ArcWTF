@@ -22,6 +22,7 @@
   box-shadow: 0px 2px 1px #00000000;
   background: #f2f2f220;
   color: #ffffff60;
+	margin: 5px 0 0 0;
 }
 
 .Tab[data-pin="true"][data-active="true"] {
@@ -36,8 +37,6 @@
 #root .TabsPanel .PinnedTabsBar {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
 }
 
 .PinnedTabsBar .tab-wrapper {
@@ -49,7 +48,10 @@
 /* GENERAL */
 
 .AnimatedTabList .Tab {
+	display: flex;
   width: 100%;
+	flex-wrap: wrap;
+	margin: 5px 10px;
 }
 
 .AnimatedTabList .Tab .title,
@@ -98,46 +100,41 @@ body {
   color: transparent;
 }
 
-.TabsPanel .Tab {
-  margin: 0;
-}
-
 .TabsPanel {
-  display: flex;
-  gap: 12px;
+	display: flex;
+	margin: 5px 0 0 0;
+}
+.TabsPanel .Tab {
+	width: auto;
 }
 
 /* Uncomment this to apply Segoe UI Variable font - Make sure to install the font first */
-#root.root {
+root.root {
   --tabs-font: 0.9375rem Segoe UI Variable Small, Segoe UI;
 }
 
 /* NEW TAB BUTTON*/
 .TabsPanel .new-tab-btns {
-  position: relative;
-}
-
-.TabsPanel .new-tab-btn {
-  margin: calc(var(--tabs-margin) * 0.5) 0;
-  --ntb-btn-height: 37px;
+	padding: 0 10px;
+  --tabs-height
 }
 
 .TabsPanel .new-tab-btn:first-of-type {
   justify-content: left;
   padding-left: calc(var(--tabs-inner-gap));
-  margin: calc(var(--tabs-margin) * 0.5) 0;
-  --ntb-btn-height: 37px;
 }
 
-.TabsPanel .new-tab-btn:first-of-type >svg,
-.TabsPanel .new-tab-btn:first-of-type >img {
-  fill: transparent;
+.TabsPanel .new-tab-btn:first-of-type > svg,
+.TabsPanel .new-tab-btn:first-of-type > img{
   background-color: var(--nav-btn-fg);
-  opacity: 40%;
+  mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiB3aWR0aD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwIDIuNUMxMCAyLjIyMzg2IDkuNzc2MTQgMiA5LjUgMkM5LjIyMzg2IDIgOSAyLjIyMzg2IDkgMi41VjlIMi41QzIuMjIzODYgOSAyIDkuMjIzODYgMiA5LjVDMiA5Ljc3NjE0IDIuMjIzODYgMTAgMi41IDEwSDlWMTYuNUM5IDE2Ljc3NjEgOS4yMjM4NiAxNyA5LjUgMTdDOS43NzYxNCAxNyAxMCAxNi43NzYxIDEwIDE2LjVWMTBIMTYuNUMxNi43NzYxIDEwIDE3IDkuNzc2MTQgMTcgOS41QzE3IDkuMjIzODYgMTYuNzc2MSA5IDE2LjUgOUgxMFYyLjVaIiBmaWxsPSIjMjEyMTIxIi8+PC9zdmc+");
+ 	opacity: 40%;
   width: 17px;
   height: 17px;
   scale: 0.9;
-  mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiB3aWR0aD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwIDIuNUMxMCAyLjIyMzg2IDkuNzc2MTQgMiA5LjUgMkM5LjIyMzg2IDIgOSAyLjIyMzg2IDkgMi41VjlIMi41QzIuMjIzODYgOSAyIDkuMjIzODYgMiA5LjVDMiA5Ljc3NjE0IDIuMjIzODYgMTAgMi41IDEwSDlWMTYuNUM5IDE2Ljc3NjEgOS4yMjM4NiAxNyA5LjUgMTdDOS43NzYxNCAxNyAxMCAxNi43NzYxIDEwIDE2LjVWMTBIMTYuNUMxNi43NzYxIDEwIDE3IDkuNzc2MTQgMTcgOS41QzE3IDkuMjIzODYgMTYuNzc2MSA5IDE2LjUgOUgxMFYyLjVaIiBmaWxsPSIjMjEyMTIxIi8+PC9zdmc+");
+	fill: transparent;
+	position: reelative;
+	top: 6px;
 }
 
 .TabsPanel .new-tab-btn:first-of-type > svg.-badge,
@@ -179,31 +176,37 @@ body {
   order: 1;
   margin-left: 5px;
   margin-right: 5px;
+	margin-bottom: 5px;
 }
 
 /* Remove background color, border and shadow for active tab panel. */
 .NavigationBar .nav-item[data-active="true"] {
-  background-color: transparent;
   box-shadow: none;
 }
 
 /* Making non-active tabs (including bookmark panels) grayscale. */
 .NavigationBar .nav-item[data-type="tabs"][data-active="false"] .icon {
   fill: var(--nav-btn-fg);
-  opacity: 40%;
-  scale: 0.75;
+  opacity: 100%;
+  scale: 1;
 }
 .NavigationBar .nav-item[data-type="bookmarks"][data-active="false"] .icon {
   fill: var(--nav-btn-fg);
-  opacity: 40%;
-  scale: 0.75;
+  opacity: 100%;
+  scale: 1;
+}
+
+.NavigationBar .nav-item[data-type="history"][data-active="false"] .icon {
+  fill: var(--nav-btn-fg);
+  opacity: 100%;
+  scale: 1;
 }
 
 /* Settings related to Hidden Panels icon and popup layer, adapting to the flipped navbar orientation. */
 #hidden_panels_btn.nav-item .icon {
   transform: scaleY(-1);
-  opacity: 40%;
-  scale: 0.9;
+  opacity: 100%;
+  scale: 1;
 }
 .hidden-panels-popup-layer {
   transform: scaleY(-1);
